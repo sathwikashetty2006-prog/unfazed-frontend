@@ -1,0 +1,679 @@
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.dashboard-loading {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #71807b;
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+
+  border: 3px solid #dce5e1;
+  border-top-color: #315f55;
+
+  border-radius: 50%;
+
+  animation: dashboard-spin 0.8s linear infinite;
+}
+
+.dashboard-loading p {
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+@keyframes dashboard-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.dashboard-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 32px;
+}
+
+.dashboard-eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #719b8d;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 1.2;
+
+  color: #203b38;
+}
+
+.dashboard-header p {
+  margin: 8px 0 0;
+
+  font-size: 14px;
+  color: #71807b;
+}
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+/* =========================================
+   USER BADGE
+========================================= */
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-badge > span {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dce9e4;
+  color: #315f55;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.user-badge div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-badge strong {
+  font-size: 13px;
+  color: #304a46;
+}
+
+.user-badge small {
+  font-size: 11px;
+  color: #84918d;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.dashboard-logout {
+  height: 38px;
+
+  padding: 0 16px;
+
+  border: 1px solid #d8e1dd;
+  border-radius: 9px;
+
+  background: white;
+  color: #53645f;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.dashboard-logout:hover {
+  background: #f0f4f2;
+  color: #203b38;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  padding: 22px;
+
+  border: 1px solid #e1e8e4;
+  border-radius: 16px;
+
+  background: white;
+
+  box-shadow:
+    0 5px 20px rgba(32, 59, 56, 0.04);
+}
+
+.stat-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #edf4f1;
+  color: #4f7e70;
+
+  font-size: 16px;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+
+  color: #899691;
+}
+
+.stat-card > strong {
+  display: block;
+
+  margin-top: 18px;
+
+  font-size: 28px;
+  line-height: 1;
+
+  color: #203b38;
+}
+
+.stat-card > p {
+  margin: 8px 0 0;
+
+  font-size: 12px;
+  color: #899691;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.dashboard-section {
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.section-heading span,
+.dashboard-wellness span,
+.client-dashboard-heading span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+
+  color: #719b8d;
+}
+
+.section-heading h2 {
+  margin: 5px 0 0;
+
+  font-size: 21px;
+  color: #203b38;
+}
+
+.section-heading > p {
+  margin: 0;
+
+  font-size: 12px;
+  color: #899691;
+}
+
+
+/* =========================================
+   ACTION CARDS
+========================================= */
+
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.action-card {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 16px;
+
+  border: 1px solid #e1e8e4;
+  border-radius: 14px;
+
+  background: white;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #c5d7d0;
+
+  box-shadow:
+    0 8px 25px rgba(32, 59, 56, 0.07);
+}
+
+.action-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #edf4f1;
+  color: #4f7e70;
+
+  font-size: 17px;
+}
+
+.action-card div {
+  flex: 1;
+}
+
+.action-card strong {
+  display: block;
+
+  font-size: 13px;
+  color: #304a46;
+}
+
+.action-card p {
+  margin: 4px 0 0;
+
+  font-size: 11px;
+  color: #899691;
+}
+
+.action-arrow {
+  font-size: 18px;
+  color: #8ca29b;
+}
+
+
+/* =========================================
+   WELLNESS CARD
+========================================= */
+
+.dashboard-wellness {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 26px;
+  padding: 28px 30px;
+
+  border-radius: 18px;
+
+  background: #203b38;
+  color: white;
+}
+
+.dashboard-wellness h2 {
+  margin: 8px 0 0;
+
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.dashboard-wellness span {
+  color: #a9c8bd;
+}
+
+.dashboard-wellness p {
+  max-width: 330px;
+
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  color: #bdcbc7;
+}
+
+
+/* =========================================
+   CLIENT DASHBOARD
+========================================= */
+
+.client-dashboard {
+  width: 100%;
+}
+
+.client-dashboard-heading {
+  margin-bottom: 22px;
+}
+
+.client-dashboard-heading h2 {
+  margin: 7px 0 0;
+
+  font-size: 25px;
+  color: #203b38;
+}
+
+
+/* =========================================
+   EMPTY APPOINTMENTS
+========================================= */
+
+.empty-appointments {
+  padding: 60px 30px;
+
+  text-align: center;
+
+  border: 1px solid #e1e8e4;
+  border-radius: 18px;
+
+  background: white;
+}
+
+.empty-icon {
+  width: 52px;
+  height: 52px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #edf4f1;
+  color: #4f7e70;
+
+  font-size: 23px;
+}
+
+.empty-appointments h3 {
+  margin: 0;
+
+  font-size: 18px;
+  color: #304a46;
+}
+
+.empty-appointments p {
+  max-width: 430px;
+
+  margin: 9px auto 22px;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  color: #899691;
+}
+
+.empty-appointments button {
+  height: 44px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #315f55;
+  color: white;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.empty-appointments button span {
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   APPOINTMENT LIST
+========================================= */
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.appointment-card {
+  padding: 22px;
+
+  border: 1px solid #e1e8e4;
+  border-radius: 16px;
+
+  background: white;
+}
+
+.appointment-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #edf1ef;
+}
+
+.appointment-card-top span:first-child {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: #899691;
+}
+
+.appointment-card h3 {
+  margin: 5px 0 0;
+
+  font-size: 17px;
+  color: #203b38;
+}
+
+.appointment-status {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #edf4f1;
+  color: #4f7e70;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.appointment-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  padding-top: 18px;
+}
+
+.appointment-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.appointment-details span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  color: #899691;
+}
+
+.appointment-details strong {
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #304a46;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-actions {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .dashboard-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dashboard-header h1 {
+    font-size: 27px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .dashboard-wellness {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .appointment-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .dashboard-header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-logout {
+    width: 100%;
+  }
+
+  .dashboard-wellness {
+    padding: 22px;
+  }
+
+  .appointment-details {
+    grid-template-columns: 1fr;
+  }
+
+}

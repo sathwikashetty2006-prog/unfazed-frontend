@@ -1,0 +1,899 @@
+/* =========================================
+   UNFAZED LANDING PAGE
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f8f6;
+  color: #203b38;
+}
+
+button {
+  font-family: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.landing-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.landing-header {
+  width: min(1180px, calc(100% - 60px));
+  height: 86px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.landing-page .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #173b35;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 3px;
+
+  cursor: pointer;
+}
+
+
+/* small logo symbol */
+
+.landing-page .logo::before {
+  content: "✦";
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #dcebe5;
+  color: #37655b;
+
+  font-size: 16px;
+}
+
+
+/* HEADER BUTTONS */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.login-link {
+  border: none;
+  background: transparent;
+
+  color: #294540;
+
+  padding: 11px 17px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.login-link:hover {
+  background: #edf2ef;
+  color: #173b35;
+}
+
+.header-button {
+  border: none;
+
+  background: #1f403a;
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 18px rgba(31, 64, 58, 0.14);
+
+  transition: all 0.2s ease;
+}
+
+.header-button:hover {
+  background: #16352f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(31, 64, 58, 0.2);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+  position: relative;
+
+  width: min(1180px, calc(100% - 60px));
+
+  min-height: 600px;
+
+  margin: 20px auto 0;
+
+  padding: 80px 70px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.65),
+      transparent 30%
+    ),
+    #dfeae6;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+}
+
+
+/* subtle background circle */
+
+.hero-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -130px;
+  bottom: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 53%;
+  max-width: 620px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 15px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  color: #456760;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  margin-bottom: 24px;
+}
+
+.hero-content h1 {
+  margin: 0 0 25px;
+
+  color: #183b35;
+
+  font-size: clamp(50px, 5.3vw, 76px);
+
+  line-height: 1.01;
+
+  letter-spacing: -3.5px;
+}
+
+.hero-content h1 span {
+  color: #557d72;
+}
+
+.hero-content > p {
+  margin: 0 0 32px;
+
+  max-width: 590px;
+
+  color: #5d716d;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 50px;
+
+  padding: 0 21px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  border: none;
+
+  background: #1f403a;
+  color: white;
+
+  box-shadow: 0 10px 22px rgba(31, 64, 58, 0.15);
+}
+
+.primary-button span {
+  font-size: 18px;
+}
+
+.primary-button:hover {
+  background: #16352f;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid #91aaa4;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  color: #294740;
+}
+
+.secondary-button:hover {
+  background: white;
+  border-color: #708f87;
+}
+
+
+/* =========================================
+   WELLNESS CARD
+========================================= */
+
+.wellness-card {
+  position: absolute;
+
+  z-index: 3;
+
+  right: 55px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 335px;
+
+  padding: 31px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(255, 255, 255, 0.95);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 25px 60px rgba(34, 65, 60, 0.13),
+    0 4px 12px rgba(34, 65, 60, 0.04);
+}
+
+.wellness-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 34px;
+
+  color: #788985;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #72a38e;
+
+  box-shadow: 0 0 0 5px #edf5f1;
+}
+
+.wellness-card h2 {
+  margin: 0 0 16px;
+
+  color: #29443f;
+
+  font-size: 29px;
+
+  line-height: 1.18;
+}
+
+.wellness-card > p {
+  margin: 0 0 24px;
+
+  color: #6d7d79;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+
+  margin-bottom: 21px;
+
+  background: #e3e8e5;
+}
+
+.wellness-details {
+  display: flex;
+
+  gap: 42px;
+}
+
+.wellness-details div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.wellness-details strong {
+  color: #34514b;
+
+  font-size: 13px;
+}
+
+.wellness-details span {
+  color: #899793;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features-section {
+  width: min(1100px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 70px 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.feature {
+  padding: 28px;
+
+  border: 1px solid #e4e9e6;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  display: flex;
+
+  gap: 17px;
+
+  box-shadow: 0 8px 25px rgba(40, 70, 65, 0.04);
+
+  transition: all 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 14px 32px rgba(40, 70, 65, 0.08);
+}
+
+.feature-icon {
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #e5f0eb;
+
+  color: #3f675e;
+
+  font-size: 20px;
+}
+
+.feature h3 {
+  margin: 0 0 8px;
+
+  color: #29433e;
+
+  font-size: 16px;
+}
+
+.feature p {
+  margin: 0;
+
+  color: #74827f;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.bottom-cta {
+  width: min(1100px, calc(100% - 80px));
+
+  margin: 5px auto 70px;
+
+  padding: 52px 60px;
+
+  border-radius: 22px;
+
+  background: #1f403a;
+
+  color: white;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr auto;
+
+  align-items: center;
+
+  gap: 40px;
+
+  box-shadow: 0 18px 40px rgba(31, 64, 58, 0.12);
+}
+
+.bottom-cta > div:first-child {
+  text-align: left;
+}
+
+.bottom-cta > div:nth-child(2) {
+  text-align: left;
+}
+
+.bottom-cta span {
+  color: #a9c2ba;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.bottom-cta h2 {
+  margin: 11px 0 0;
+
+  color: white;
+
+  font-size: 32px;
+
+  line-height: 1.18;
+}
+
+.cta-message {
+  color: #c8d5d1;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.bottom-cta button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: white;
+  color: #1f403a;
+
+  padding: 14px 21px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.bottom-cta button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.bottom-cta button span {
+  margin-left: 10px;
+
+  color: #1f403a;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.landing-footer {
+  width: min(1100px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  padding: 26px 0 40px;
+
+  border-top: 1px solid #dfe5e2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-logo {
+  color: #294740;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.landing-footer p {
+  color: #899692;
+
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.footer-links button {
+  border: none;
+
+  background: transparent;
+
+  color: #60736e;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links button:hover {
+  color: #1f403a;
+}
+
+.footer-links span {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #aebbb7;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-section {
+    padding: 65px 45px;
+  }
+
+  .hero-content {
+    width: 55%;
+  }
+
+  .hero-content h1 {
+    font-size: 56px;
+  }
+
+  .wellness-card {
+    right: 30px;
+    width: 290px;
+  }
+
+  .features-section {
+    width: calc(100% - 60px);
+  }
+
+  .bottom-cta {
+    width: calc(100% - 60px);
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .landing-header {
+    width: calc(100% - 35px);
+
+    height: 72px;
+  }
+
+  .landing-page .logo {
+    font-size: 19px;
+  }
+
+  .landing-page .logo::before {
+    width: 28px;
+    height: 28px;
+
+    font-size: 13px;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .login-link {
+    padding: 9px 11px;
+
+    font-size: 12px;
+  }
+
+  .header-button {
+    padding: 10px 13px;
+
+    font-size: 12px;
+  }
+
+
+  .hero-section {
+    width: calc(100% - 30px);
+
+    min-height: auto;
+
+    margin-top: 12px;
+
+    padding: 42px 25px;
+
+    border-radius: 22px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .hero-content h1 {
+    font-size: 43px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+
+  .wellness-card {
+    position: relative;
+
+    right: auto;
+    top: auto;
+
+    transform: none;
+
+    width: 100%;
+
+    margin-top: 42px;
+  }
+
+
+  .features-section {
+    width: calc(100% - 30px);
+
+    padding: 45px 0;
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .feature {
+    padding: 23px;
+  }
+
+
+  .bottom-cta {
+    width: calc(100% - 30px);
+
+    margin-bottom: 45px;
+
+    padding: 38px 25px;
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    text-align: center;
+  }
+
+  .bottom-cta > div:first-child,
+  .bottom-cta > div:nth-child(2) {
+    text-align: center;
+  }
+
+  .bottom-cta h2 {
+    font-size: 28px;
+  }
+
+  .bottom-cta button {
+    width: 100%;
+  }
+
+
+  .landing-footer {
+    width: calc(100% - 35px);
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding-bottom: 30px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .hero-content h1 {
+    font-size: 37px;
+  }
+
+  .wellness-card {
+    padding: 24px;
+  }
+
+  .wellness-card h2 {
+    font-size: 25px;
+  }
+
+  .wellness-details {
+    gap: 25px;
+  }
+
+}

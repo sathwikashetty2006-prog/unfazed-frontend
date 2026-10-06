@@ -1,0 +1,255 @@
+.therapist-profile-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0 50px;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.therapist-profile-header {
+  margin-bottom: 25px;
+}
+
+.therapist-profile-header h1 {
+  margin: 0;
+  color: #203b38;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.therapist-profile-header p {
+  margin: 8px 0 0;
+  color: #6d7b78;
+  font-size: 15px;
+}
+
+/* LOADING */
+
+.profile-loading {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.profile-loading h2 {
+  margin: 0 0 8px;
+  color: #203b38;
+}
+
+.profile-loading p {
+  margin: 0;
+  color: #6d7b78;
+}
+
+/* MESSAGES */
+
+.profile-success,
+.profile-error {
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.profile-success {
+  background: #e9f4ef;
+  color: #285b4f;
+  border: 1px solid #cfe5dc;
+}
+
+.profile-error {
+  background: #fff0f0;
+  color: #a33a3a;
+  border: 1px solid #f0cccc;
+}
+
+/* PROFILE CARD */
+
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(32, 59, 56, 0.05);
+}
+
+.profile-card-heading {
+  margin-bottom: 25px;
+}
+
+.profile-card-heading h2 {
+  margin: 0 0 7px;
+  color: #203b38;
+  font-size: 21px;
+}
+
+.profile-card-heading p {
+  margin: 0;
+  color: #6d7b78;
+  font-size: 14px;
+}
+
+/* FORM */
+
+.therapist-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.profile-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.profile-form-group label {
+  color: #3f504c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-form-group input,
+.profile-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d7e0dd;
+  border-radius: 10px;
+  background: #fbfcfb;
+  color: #203b38;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.profile-form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.profile-form-group input:focus,
+.profile-form-group textarea:focus {
+  border-color: #315f55;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(49, 95, 85, 0.1);
+}
+
+.profile-form-group small {
+  color: #7a8784;
+  font-size: 12px;
+}
+
+/* SAVE BUTTON */
+
+.save-profile-button {
+  align-self: flex-start;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #315f55;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.save-profile-button:hover:not(:disabled) {
+  background: #203b38;
+  transform: translateY(-1px);
+}
+
+.save-profile-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* PUBLIC PROFILE */
+
+.public-profile-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 25px;
+  padding: 25px;
+  background: #f7faf8;
+  border: 1px solid #dce7e2;
+  border-radius: 16px;
+}
+
+.public-profile-box h2 {
+  margin: 0 0 8px;
+  color: #203b38;
+  font-size: 19px;
+}
+
+.public-profile-box p {
+  margin: 5px 0;
+  color: #6d7b78;
+  font-size: 13px;
+}
+
+.public-profile-box strong {
+  display: inline-block;
+  margin-top: 5px;
+  color: #315f55;
+  font-size: 15px;
+}
+
+.public-profile-api {
+  max-width: 55%;
+}
+
+.public-profile-api code {
+  display: block;
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #dce5e1;
+  border-radius: 8px;
+  color: #315f55;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .therapist-profile-page {
+    padding-bottom: 30px;
+  }
+
+  .therapist-profile-header h1 {
+    font-size: 28px;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .save-profile-button {
+    width: 100%;
+  }
+
+  .public-profile-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .public-profile-api {
+    max-width: 100%;
+  }
+}

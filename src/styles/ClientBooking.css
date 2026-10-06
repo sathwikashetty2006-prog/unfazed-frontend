@@ -1,0 +1,292 @@
+.client-booking-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5px 0 60px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.client-booking-header {
+  margin-bottom: 28px;
+}
+
+.client-booking-header h1 {
+  margin: 0;
+  color: #203b38;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.client-booking-header p {
+  margin: 8px 0 0;
+  color: #6d7b78;
+  font-size: 15px;
+}
+
+/* =========================
+   THERAPIST CARD
+========================= */
+
+.therapist-card {
+  position: relative;
+  margin-bottom: 22px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e1e8e5;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(32, 59, 56, 0.05);
+}
+
+.therapist-card::before {
+  content: "YOUR THERAPIST";
+  display: block;
+  margin-bottom: 12px;
+  color: #315f55;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.therapist-card h2 {
+  margin: 0 0 8px;
+  color: #203b38;
+  font-size: 23px;
+}
+
+.therapist-card p {
+  margin: 6px 0;
+  color: #667571;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.therapist-card p:first-of-type {
+  color: #315f55;
+  font-weight: 600;
+}
+
+/* =========================
+   AVAILABILITY CARD
+========================= */
+
+.availability-card {
+  margin-bottom: 22px;
+  padding: 25px;
+  background: #f7f9f8;
+  border: 1px solid #e1e8e5;
+  border-radius: 18px;
+}
+
+.availability-card h2 {
+  margin: 0 0 18px;
+  color: #203b38;
+  font-size: 20px;
+}
+
+.availability-card p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 9px 0;
+  padding: 12px 15px;
+  background: #ffffff;
+  border: 1px solid #e2e9e6;
+  border-radius: 10px;
+  color: #65736f;
+  font-size: 14px;
+}
+
+.availability-card p strong {
+  color: #315f55;
+  font-weight: 600;
+}
+
+/* =========================
+   BOOKING CARD
+========================= */
+
+.booking-card {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e1e8e5;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(32, 59, 56, 0.05);
+}
+
+.booking-card h2 {
+  margin: 0 0 22px;
+  color: #203b38;
+  font-size: 21px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.booking-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.booking-card label {
+  margin-top: 8px;
+  color: #3f504c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.booking-card input,
+.booking-card select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d7e0dd;
+  border-radius: 10px;
+  background: #fbfcfb;
+  color: #203b38;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.booking-card input:focus,
+.booking-card select:focus {
+  border-color: #315f55;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(49, 95, 85, 0.1);
+}
+
+/* =========================
+   SELECTED DAY
+========================= */
+
+.booking-card form > p {
+  margin: 2px 0 8px;
+  padding: 10px 13px;
+  border-radius: 9px;
+  background: #f1f6f3;
+  color: #536761;
+  font-size: 13px;
+}
+
+.booking-card form > p strong {
+  color: #315f55;
+}
+
+/* =========================
+   AVAILABLE HOURS
+========================= */
+
+.booking-card form > label + p:not(.error-message) {
+  background: #f7f9f8;
+  border: 1px solid #e1e8e5;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.booking-card button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #315f55;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.booking-card button:hover:not(:disabled) {
+  background: #203b38;
+  transform: translateY(-1px);
+}
+
+.booking-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   SUCCESS / ERROR
+========================= */
+
+.success-message {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #e9f4ef;
+  border: 1px solid #cfe5dc;
+  color: #285b4f;
+  font-size: 14px;
+}
+
+.error-message {
+  margin: 10px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff1f1;
+  border: 1px solid #f0cccc;
+  color: #a33a3a;
+  font-size: 14px;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.client-booking-loading {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.client-booking-loading h2 {
+  margin: 0 0 8px;
+  color: #203b38;
+}
+
+.client-booking-loading p {
+  margin: 0;
+  color: #6d7b78;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .client-booking-page {
+    padding-bottom: 35px;
+  }
+
+  .therapist-card,
+  .availability-card,
+  .booking-card {
+    padding: 20px;
+  }
+
+  .therapist-card h2 {
+    font-size: 21px;
+  }
+
+  .booking-card h2 {
+    font-size: 19px;
+  }
+
+  .availability-card p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
